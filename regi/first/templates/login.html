@@ -1,0 +1,17 @@
+
+{% extends 'home.html' %}
+{% block content %}
+
+        <h1>LOGIN PAGE</h1>
+        {% include "message.html" %}
+
+         <form action="{% url 'login' %}" method="POST">{% csrf_token %}
+            <input type='text'name="username" id="username" placeholder="enter username"><br>
+            <input type='password'name="password" id="password" placeholder="enter password"><br>
+            <button type='submit'>LOGIN</button>
+         </form>
+{% endblock content %}
+
+
+
+

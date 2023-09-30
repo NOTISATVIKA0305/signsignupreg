@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+{% block content %}
+        <h1>REGISTER PAGE</h1>
+         <form action="{% url 'register' %}" method="POST">{% csrf_token %}
+            <input type='text'name="username" id="username" placeholder="enter username"><br>
+            <input type='text'name="email" id="email" placeholder="enter Email"><br>
+            <input type='password'name="password" id="password" placeholder="enter password"><br>
+            <button type='submit'>register</button>
+         </form>
+
+
+            {% endblock content %}
